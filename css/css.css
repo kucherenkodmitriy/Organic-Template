@@ -59,12 +59,45 @@ section h2{
 }
 @media (max-width: 991px){
 	section:not(.fixed){
+		height: auto;
 		min-height: 0;
 		max-height: none;
 	}
+	section#main .container{
+		padding: 6rem 0;
+	}
 }
-div#navbar{
-	padding-top: 2rem;
+@media (max-width: 767px){
+	section#main .container{
+		padding: 5rem 0;
+	}
+}
+.navbar-toggle{
+	margin-top: 20px;
+	border: none;
+	border-radius: 0;
+}
+.navbar-toggle .icon-bar{
+	background-color: white;
+}
+div.navbar-header{
+	height: 70px;
+}
+@media (min-width: 768px){
+	div#navbar{
+		padding-top: 2rem;
+	}
+}
+div[aria-expanded="true"]{
+	background-color: white;
+}
+div#header_logo img{
+	width: 100%;
+}
+@media (max-width: 767px){
+	div#header_logo{
+		width: 3.5rem;
+	}
 }
 nav.navbar-fixed-top{
 	position: absolute;
@@ -85,6 +118,14 @@ a.navbar-brand{
 	font-family: 'Lato';
 	font-weight: 700;
 }
+@media (max-width: 767px){
+	.navbar li a{
+		font-size: 1.5rem;
+		color: black;
+		font-family: 'Lato';
+		font-weight: 700;
+	}
+}
 .navbar li a:hover{
 	background: none;
 }
@@ -102,4 +143,78 @@ section#main .container > .col-md-6{
     font-weight: 300;
     text-shadow: 0 1px 1px black;
     color: white;
+}
+@media (max-width: 767px){
+	section#main .container > .col-md-6{
+		padding-left: 15px;
+	}
+}
+section#main .oblique-blocks{
+	position: relative;
+}
+section#main .oblique-block{
+	position: absolute;
+    height: 45px;
+    width: 100%;
+    transform: rotate(1.5deg);
+    background-color: white;
+    top: -22px;
+}
+section#main .oblique-block-opacity{
+	position: absolute;
+    height: 50px;
+    width: 100%;
+    transform: rotate(1deg);
+    background-color: white;
+    top: -38px;
+    opacity: 0.5;
+}
+section.content-height{
+	height: auto;
+	min-height: 0;
+	max-height: none;
+}
+section#description-block{
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+section#description-block .col-md-4{
+	color: #fe992a;
+	font-family: 'Lato';
+	font-size: 2rem;
+	font-style: italic;
+	line-height: 28px;
+}
+section#description-block h5{
+	font-size: 2rem;
+}
+section#description-block .col-md-4{
+	padding-left: 80px;
+}
+section#description-block .col-md-8 h3{
+	font-weight: 400;
+	color: #fe992a;
+}
+p.indent{
+	padding-top: 1.5em;
+}
+section#description-block .col-md-8 p{
+	color: #737c85;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+footer{
+	height: auto;
+	background-color: #e56c69;
+    padding: 50px 0;
+    color: white;
+    font-family: Arial;
+}
+@media (max-width: 991px){
+	footer{
+		text-align: center;
+	}
 }
